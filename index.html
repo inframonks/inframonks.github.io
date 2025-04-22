@@ -95,12 +95,48 @@
         <h2>Kontakt aufnehmen</h2>
         <h3>Wir freuen uns über jede Anfrage</h3>
       </hgroup>
-      <form class="grid">
-        <input type="text" id="name" name="name" placeholder="Ihr Name" aria-label="Name" required />
-        <input type="email" id="email" name="email" placeholder="Ihre E-Mail" aria-label="E-Mail" required />
-        <textarea id="message" name="message" placeholder="Ihre Nachricht" aria-label="Nachricht" required></textarea>
-        <button type="submit" onclick="event.preventDefault()">Absenden</button>
+      <form id="contactForm" class="grid">
+        <input type="text" name="name" placeholder="Ihr Name" required />
+        <input type="email" name="email" placeholder="Ihre E-Mail" required />
+        <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
+        <button type="submit">Absenden</button>
       </form>
+      
+      <script>
+        const AUTH_TOKEN = "UcyQOlRCRAFE50vHijPt9cKsw5zTLGQfxYz7xPPW0d2qur2KXsMr7isTmt0hj4GH"; // Muss mit dem Server übereinstimmen
+        const ENDPOINT_URL = "https://vps01.lenhardt.cc:8086/api/contact";
+      
+        document.getElementById("contactForm").addEventListener("submit", async function (e) {
+          e.preventDefault();
+      
+          const formData = new FormData(this);
+          const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            message: formData.get("message"),
+            auth: AUTH_TOKEN
+          };
+      
+          try {
+            const res = await fetch(ENDPOINT_URL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify(data)
+            });
+      
+            if (res.ok) {
+              alert("Nachricht erfolgreich gesendet!");
+              this.reset();
+            } else {
+              alert("Fehler beim Senden.");
+            }
+          } catch (err) {
+            alert("Verbindungsfehler.");
+          }
+        });
+      </script>
     </section>
 
     <section>
@@ -109,15 +145,16 @@
         <h3>Impressum & Datenschutz</h3>
       </hgroup>
       <p><strong>Inframonks</strong><br />
-         FillMestreet 1a<br />
-         12345 Technikstadt<br />
-         E-Mail: kontakt@inframonks.de</p>
+         Dominik Lenhardt<br />
+         Baumgartenstraße 37<br />
+         35321 Laubach<br />
+         E-Mail: office@lenhardt.cc</p>
       <p><strong>Datenschutz:</strong> Wir erheben keine personenbezogenen Daten über diese Website. Eingaben im Formular dienen lediglich der Kontaktaufnahme. Ihre Daten werden niemals an Dritte weitergegeben.</p>
     </section>
   </main>
 
   <footer class="container">
-    <small>Die Seite befindet sich im Aufbau. Daher sind die Inhalte noch sehr begrenzt</small>
+    <small>Die Seite und das Unternehmen befinden sich im Aufbau und werden zu notwendiger Zeit ergänzt und angepasst.</small>
   </footer>
 </body>
 </html>
