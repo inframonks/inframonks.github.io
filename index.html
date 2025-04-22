@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inframonks</title>
+  #<link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" type="text/css" media="all">
+  <style>
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 0.5rem;
+    }
+    .logo svg {
+      display: block;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="container-fluid">
+    <ul>
+      <li class="brand">
+        <span class="logo">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="5">
+            <rect x="10" y="10" width="80" height="80" rx="10" />
+            <circle cx="50" cy="50" r="20" />
+            <line x1="30" y1="70" x2="70" y2="70" />
+          </svg>
+        </span>
+        INFRAMONKS
+      </li>
+    </ul>
+    <ul>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="kontakt" role="button">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <div class="grid">
+      <section>
+        <hgroup>
+          <h2>Infrastruktur. Einfach. Zuverlässig.</h2>
+          <h3>Wir kümmern uns um alles, was Sie nicht selbst hosten wollen.</h3>
+        </hgroup>
+        <p>Inframonks ist Ihr Partner für stabile, effiziente und sichere Basisinfrastruktur: RZ-Fläche, Virtualisierung mit Proxmox, Netzwerkdienste wie DNS, Auth, PKI, Monitoring uvm. – voll automatisiert, open source basiert und mit Fokus auf Entscheidungsfreiheit.</p>
+        <figure>
+          <img src="https://source.unsplash.com/featured/?server,technology" alt="Server Infrastructure" />
+          <figcaption><a href="https://unsplash.com" target="_blank">Bildquelle: Unsplash</a></figcaption>
+        </figure>
+        <h3>Self-Hosting oder SaaS? Ihre Entscheidung.</h3>
+        <p>Ob Sie lieber selbst hosten oder auf unsere sichere SaaS-Plattform setzen – wir bieten volle Flexibilität, ohne Cloud-Zwang.</p>
+        <h3>Beratung & Support</h3>
+        <p>Wir beraten Sie bei der Planung und begleiten Sie beim Aufbau effizienter IT-Strukturen mit Fokus auf Automatisierung und Sicherheit.</p>
+      </section>
+    </div>
+  </main>
+
+  <section aria-label="Subscribe example">
+    <div class="container">
+      <article>
+        <hgroup>
+          <h2>Bleiben Sie informiert</h2>
+          <h3>Tragen Sie sich ein, um Neuigkeiten zu Inframonks zu erhalten</h3>
+        </hgroup>
+        <form class="grid">
+          <input type="text" id="firstname" name="firstname" placeholder="Ihr Name" aria-label="Name" required />
+          <input type="email" id="email" name="email" placeholder="Ihre E-Mail" aria-label="E-Mail" required />
+          <button type="submit" onclick="event.preventDefault()">Abonnieren</button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <footer class="container">
+    <small><a href="impressum.html">Impressum</a> • <a href="datenschutz.html">Datenschutz</a></small>
+  </footer>
+</body>
+</html>
