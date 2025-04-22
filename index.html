@@ -144,16 +144,40 @@
         <h3>Impressum & Datenschutz</h3>
       </hgroup>
       <p><strong>Inframonks</strong><br />
-         Dominik Lenhardt<br />
+         Dominik Lenhardt (Einzelunternehmer)<br />
          Baumgartenstraße 37<br />
          35321 Laubach<br />
          E-Mail: office@lenhardt.cc</p>
-      <p><strong>Datenschutz:</strong> Wir erheben keine personenbezogenen Daten über diese Website. Eingaben im Formular dienen lediglich der Kontaktaufnahme. Ihre Daten werden niemals an Dritte weitergegeben.</p>
+      
+      <p><strong>Verantwortlich für den Inhalt nach § 5 TMG:</strong><br />
+         Dominik Lenhardt
+      </p>
+      
+      <p><strong>Hinweis zur Unternehmensform:</strong><br />
+         Das Unternehmen Inframonks befindet sich derzeit in Gründung. Bis zur vollständigen Eintragung und Umfirmierung in eine Kapitalgesellschaft agiert der Betreiber als Einzelunternehmer. Alle rechtlichen Verpflichtungen und Verantwortlichkeiten liegen bis dahin bei Dominik Lenhardt.
+      </p>
+      
+      <p><strong>Datenschutz:</strong><br />
+        Wir erheben auf dieser Website keine personenbezogenen Daten ohne Ihre ausdrückliche Zustimmung.
+Daten, die Sie über das Kontaktformular eingeben, dienen ausschließlich der Kommunikation mit Ihnen und werden nicht an Dritte weitergegeben.
+Es erfolgt keine automatische Analyse, kein Tracking und keine Weitergabe Ihrer Daten an externe Dienste.
+      </p>
+
+      <p><strong>ℹ️ Hinweis zum Entwicklungsstand</strong><br />
+        Diese Website sowie das Unternehmen befinden sich aktuell im Aufbau. Inhalte, rechtliche Hinweise und Strukturen werden fortlaufend angepasst und ergänzt, sobald die nächsten Schritte der Unternehmensgründung vollzogen sind.
+      </p>
     </section>
   </main>
 
   <footer class="container">
-    <small>Die Seite und das Unternehmen befinden sich im Aufbau und werden zu notwendiger Zeit ergänzt und angepasst.</small>
+    <small>
+      &copy; <span id="year"></span> Dominik Lenhardt • <a href="#impressum">Impressum</a> • <a href="#datenschutz">Datenschutz</a>
+    </small>
   </footer>
+  
+  <script>
+    // Dynamisches Jahr für Copyright
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
