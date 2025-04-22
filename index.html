@@ -22,6 +22,9 @@
       font-size: 1.25rem;
       letter-spacing: 1px;
     }
+    main.container > section {
+      margin-bottom: 4rem;
+    }
   </style>
 </head>
 <body>
@@ -38,51 +41,83 @@
         INFRAMONKS
       </li>
     </ul>
-    <ul>
-      <li><a href="leistungen.html">Leistungen</a></li>
-      <li><a href="ueber-uns.html">Über uns</a></li>
-      <li><a href="kontakt" role="button">Kontakt</a></li>
-    </ul>
   </nav>
 
   <main class="container">
-    <div class="grid">
-      <section>
-        <hgroup>
-          <h2>Infrastruktur. Einfach. Zuverlässig.</h2>
-          <h3>Wir kümmern uns um alles, was Sie nicht selbst hosten wollen.</h3>
-        </hgroup>
-        <p>Inframonks ist Ihr Partner für stabile, effiziente und sichere Basisinfrastruktur: RZ-Fläche, Virtualisierung mit Proxmox, Netzwerkdienste wie DNS, Auth, PKI, Monitoring uvm. – voll automatisiert, open source basiert und mit Fokus auf Entscheidungsfreiheit.</p>
-        <figure>
-          <img src="https://source.unsplash.com/featured/?server,technology" alt="Server Infrastructure" />
-          <figcaption><a href="https://unsplash.com" target="_blank">Bildquelle: Unsplash</a></figcaption>
-        </figure>
-        <h3>Self-Hosting oder SaaS? Ihre Entscheidung.</h3>
-        <p>Ob Sie lieber selbst hosten oder auf unsere sichere SaaS-Plattform setzen – wir bieten volle Flexibilität, ohne Cloud-Zwang.</p>
-        <h3>Beratung & Support</h3>
-        <p>Wir beraten Sie bei der Planung und begleiten Sie beim Aufbau effizienter IT-Strukturen mit Fokus auf Automatisierung und Sicherheit.</p>
-      </section>
-    </div>
+    <section>
+      <hgroup>
+        <h2>Infrastruktur. Einfach. Zuverlässig.</h2>
+        <h3>Wir kümmern uns um alles, was Sie nicht selbst hosten wollen.</h3>
+      </hgroup>
+      <p>Inframonks bietet hochverfügbare, automatisierte Infrastruktur auf Basis von Open Source. Unsere Kunden erhalten stabile Systeme, volle Kontrolle und umfassenden Support – ohne Public Cloud-Zwang.</p>
+    </section>
+
+    <section>
+      <hgroup>
+        <h2>Unsere Leistungen</h2>
+        <h3>Infrastruktur-Betrieb & darüber hinaus</h3>
+      </hgroup>
+      <ul>
+        <li>🏢 RZ-Fläche & Hosting (on-prem & hybrid)</li>
+        <li>📦 Virtualisierung mit Proxmox VE</li>
+        <li>🔧 Standardisierte VMs & Automatisierung</li>
+        <li>🧠 Netzwerkdienste: DNS, NTP, Auth, Proxy, PKI</li>
+        <li>📊 Monitoring mit Prometheus, Grafana, Loki</li>
+        <li>🧰 Self-Hosting Beratung oder vollständige SaaS-Lösungen</li>
+        <li>🔐 Fokus auf Verschlüsselung, Sicherheit & Open Source</li>
+      </ul>
+    </section>
+
+    <section>
+      <hgroup>
+        <h2>Wer wir sind</h2>
+        <h3>Techniker. Perfektionisten. Partner.</h3>
+      </hgroup>
+      <p>Wir sind ein Team aus erfahrenen Systemadministratoren, Entwicklern und Beratern, die eine Vision teilen: Infrastruktur soll einfach, effizient und vollständig kontrollierbar sein. Wir lieben Open Source, arbeiten automatisiert und beraten ehrlich.</p>
+      <p>Unsere Mission: Wir übernehmen die technische Basis, damit sich unsere Kunden auf ihr Kerngeschäft konzentrieren können.</p>
+    </section>
+
+    <section>
+      <hgroup>
+        <h2>Warum Inframonks?</h2>
+        <h3>Autonomie statt Cloud-Abhängigkeit</h3>
+      </hgroup>
+      <ul>
+        <li>🔓 100% Transparenz – durch Open Source</li>
+        <li>🛡️ Datenschutz & Sicherheit by Design</li>
+        <li>⚙️ Effizienz durch Automatisierung</li>
+        <li>🧘 Technischer Fokus mit ruhiger Hand</li>
+      </ul>
+    </section>
+
+    <section>
+      <hgroup>
+        <h2>Kontakt aufnehmen</h2>
+        <h3>Wir freuen uns über jede Anfrage</h3>
+      </hgroup>
+      <form class="grid">
+        <input type="text" id="name" name="name" placeholder="Ihr Name" aria-label="Name" required />
+        <input type="email" id="email" name="email" placeholder="Ihre E-Mail" aria-label="E-Mail" required />
+        <textarea id="message" name="message" placeholder="Ihre Nachricht" aria-label="Nachricht" required></textarea>
+        <button type="submit" onclick="event.preventDefault()">Absenden</button>
+      </form>
+    </section>
+
+    <section>
+      <hgroup>
+        <h2>Rechtliches</h2>
+        <h3>Impressum & Datenschutz</h3>
+      </hgroup>
+      <p><strong>Inframonks</strong><br />
+         FillMestreet 1a<br />
+         12345 Technikstadt<br />
+         E-Mail: kontakt@inframonks.de</p>
+      <p><strong>Datenschutz:</strong> Wir erheben keine personenbezogenen Daten über diese Website. Eingaben im Formular dienen lediglich der Kontaktaufnahme. Ihre Daten werden niemals an Dritte weitergegeben.</p>
+    </section>
   </main>
 
-  <section aria-label="Subscribe example">
-    <div class="container">
-      <article>
-        <hgroup>
-          <h2>Bleiben Sie informiert</h2>
-          <h3>Tragen Sie sich ein, um Neuigkeiten zu Inframonks zu erhalten</h3>
-        </hgroup>
-        <form class="grid">
-          <input type="text" id="firstname" name="firstname" placeholder="Ihr Name" aria-label="Name" required />
-          <input type="email" id="email" name="email" placeholder="Ihre E-Mail" aria-label="E-Mail" required />
-          <button type="submit" onclick="event.preventDefault()">Abonnieren</button>
-        </form>
-      </article>
-    </div>
-  </section>
-
   <footer class="container">
-    <small><a href="impressum.html">Impressum</a> • <a href="datenschutz.html">Datenschutz</a></small>
+    <small><a href="#">Impressum</a> • <a href="#">Datenschutz</a></small>
   </footer>
 </body>
 </html>
